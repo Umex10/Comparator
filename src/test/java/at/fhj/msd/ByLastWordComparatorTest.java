@@ -21,11 +21,14 @@ public class ByLastWordComparatorTest {
     void StringTest() {
 
         String[] fruits = {"banana", "apple", "green apple", "cherry", "yellow banana", "red cherry"};
+        String[] fruits2 = { "apple", "green apple", "yellow banana", "red cherry", "cherry", "banana" };
 
         String[] solution = {"apple", "green apple", "banana", "yellow banana", "cherry", "red cherry"};
 
         Arrays.sort(fruits, StringThing);
+        Arrays.sort(fruits2, StringThing);
 
         assertArrayEquals(solution, fruits);
+        assertArrayEquals(solution, fruits2);
     }
 }

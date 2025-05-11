@@ -10,10 +10,16 @@ public class ByLastWordComparator implements Comparator<String> {
         String[] w1Splited = w1.split(" ");
         String[] w2Splited = w2.split(" ");
 
-        String w1Last = w1Splited[w1Splited.length - 1];
+        String w1Last = w1Splited[w1Splited.length - 1]; //LAST ELEMENT
         String w2Last = w2Splited[w2Splited.length - 1];
 
-        return w1Last.compareTo(w2Last);
+        if (w1Last.equals(w2Last)) {
+            return w1.compareTo(w2);
+        } else {
+
+            return w1Last.compareTo(w2Last);
+        }
+
     }
 
 }
